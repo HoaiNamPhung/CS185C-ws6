@@ -1,0 +1,75 @@
+ 1931  DATETIME=$(date "+%D_%T")
+ 1932  echo $DATETIME
+ 1933  FILEID="PRODUCTS/0316601950"; cp ${FILEID}.txt ${FILEID}.${DATETIME}.txt
+ 1934  ls PRODUCTS
+ 1935  DATETIME=$(date "+%Y-%m-%d-%T")
+ 1936  echo $DATETIME
+ 1937  FILEID="PRODUCTS/0316601950"; cp ${FILEID}.txt ${FILEID}.${DATETIME}.txt
+ 1938  ls PRODUCTS
+ 1939  head PRODUCTS/0316601950.2021-10-01-07:03:56.txt
+ 1940  echo "5	5" >> PRODUCTS/0316601950.2021-10-01-07:03:56.txt
+ 1941  head PRODUCTS/0316601950.2021-10-01-07:03:56.txt
+ 1942  tail PRODUCTS/0316601950.2021-10-01-07:03:56.txt
+ 1943  ln -s PRODUCTS/0316601950.2021-10-01-07:03:56.txt PRODUCTS/0316601950.LATEST.txt
+ 1944  tail PRODUCTS/0316601950.LATEST.txt
+ 1945  ls
+ 1946  ls PRODUCTS
+ 1947  ls -l PRODUCTS
+ 1948  man cron
+ 1949  man crontab
+ 1950* echo "file=PRODUCTS/0316601950.txt; total=0; i=1; cat $file | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; (echo $total/$i | bc) | tee PRODUCTS/0316601950.AVGRATING.txt)" > GETAVGRATING.txt
+ 1951  touch GETAVGRATING.txt
+ 1952  vi GETAVGRATING.txt
+ 1953  head GETAVGRATING.txt
+ 1954  crontab GETAVGRATING.txt
+ 1955  crontab
+ 1956  cron
+ 1957  vi GETAVGRATING.txt
+ 1958  crontab GETAVGRATING.txt
+ 1959  crontab -l
+ 1960  ls
+ 1961  ls PRODUCTS
+ 1962  head PRODUCTS/0316601950.AVGRATING.txt
+ 1963  head 0316601950.AVGRATING.txt
+ 1964  head PRODUCTS/0316601950.AVGRATING.txt
+ 1965  crontab -1
+ 1966  cd PRODUCTS
+ 1967  head 0316601950.2021-10-01-07:03:56.txt
+ 1968  head 0316601950.LATEST.txt
+ 1969  ln -s ../PRODUCTS/0316601950.2021-10-01-07:03:56.txt ../PRODUCTS/0316601950.LATEST.txt
+ 1970* ln -sf ../PRODUCTS/0316601950.2021-10-01-07:03:56.t
+ 1971  ls -l
+ 1972  head /0316601950.LATEST.txt
+ 1973  head 0316601950.LATEST.txt
+ 1974  cd
+ 1975  head PRODUCTS/0316601950.AVGRATING.txt
+ 1976  ls PRODUCTS
+ 1977  ls
+ 1978  head GETAVGRATING.txt
+ 1979  file=PRODUCTS/0316601950.LATEST.txt; total=0; i=1; cat $file | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; (echo $total/$i | bc) | tee PRODUCTS/0316601950.AVGRATING.txt)
+ 1980  file=PRODUCTS/0316601950.LATEST.txt; total=0; i=1; cat $file | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; echo $((total/i)) | tee PRODUCTS/0316601950.AVGRATING.txt)
+ 1981  file=PRODUCTS/0316601950.LATEST.txt; total=0; i=1; cat $file | cut -f2 | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; echo $((total/i)) | tee PRODUCTS/0316601950.AVGRATING.txt)
+ 1982  vi GETAVGRATING.txt
+ 1983  crontab GETAVGRATING.txt
+ 1984  crontab l
+ 1985  crontab -l
+ 1986  head PRODUCTS/0316601950.AVGRATING.txt
+ 1987  vi GETAVGRATING.txt
+ 1988  crontab GETAVGRATING.txt
+ 1989  crontab -l
+ 1990  head PRODUCTS/0316601950.AVGRATING.txt
+ 1991  history > cmds.log
+ 1992  script ws6.txt'
+ 1993  script ws6.txt
+ 1994  vi ws6.txt
+ 1995  tail cmds.log
+ 1996  tail cmds.log 100
+ 1997  tail 100 cmds.log
+ 1998  man tail
+ 1999  tail -n 100 cmds.log
+ 2000  tail -n 60 cmds.log
+ 2001  tail -n 58 cmds.log > cmds.log
+ 2002  head -n 100 cmds.log
+ 2003  head cmds.log
+ 2004  vi cmds.log
+ 2005  history > test.log

@@ -1,0 +1,1 @@
+* * * * * file=../PRODUCTS/0316601950.LATEST.txt; total=0; i=1; cat $file | cut -f2 | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; echo $((total/i)) | tee ../PRODUCTS/0316601950.AVGRATING.txt)

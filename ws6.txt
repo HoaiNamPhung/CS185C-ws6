@@ -1,0 +1,20 @@
+Script started on 2021-10-01 08:17:35+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="237" LINES="66"]
+
+1) DATETIME=$(date "+%Y-%m-%d-%T")
+
+2) FILEID="PRODUCTS/0316601950"; cp ${FILEID}.txt ${FILEID}.${DATETIME}.txt
+
+3) echo "5  5" >> PRODUCTS/0316601950.2021-10-01-07:03:56.txt
+
+4) ln -s ../PRODUCTS/0316601950.2021-10-01-07:03:56.txt ../PRODUCTS/0316601950.LATEST.txt
+
+5) 
+For this, I made a file containing the desired command to schedule. The first five characters indicate the scheduling timing; in this case, every minute:
+
+* * * * * file=../PRODUCTS/0316601950.LATEST.txt; total=0; i=1; cat $file | cut -f2 | (while read line; do total=$(echo $total+$line | bc); i=$(($i+1)); done; echo $((total/i)) | tee ../PRODUCTS/0316601950.AVGRATING.txt)
+
+I then used the following command to start scheduling the above file's command:
+
+crontab GETAVGRATING.txt 
+
+Script done on 2021-10-01 08:17:51+00:00 [COMMAND_EXIT_CODE="0"]
